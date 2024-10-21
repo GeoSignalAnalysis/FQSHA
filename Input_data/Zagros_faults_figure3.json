@@ -1,0 +1,20 @@
+{
+   "Fault": {
+        "ScR": "WC94-R",
+        "year_for_calculations": 2024,
+        "Length": 67,
+        "Dip": 40,
+        "Seismogenic_Thickness": 10,
+        "SRmin": 2.0,
+        "SRmax": 4.0,
+        "Mobs": 7.7,
+        "sdMobs": 0.05,
+        "Last_eq_time": 1900,
+        "SCC": 0.205,
+        "ShearModulus": 3,
+        "StrainDrop": 3,
+        "Mmin": 5.5,
+        "b-value": 1
+    }
+
+}

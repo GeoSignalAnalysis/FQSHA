@@ -1,0 +1,20 @@
+{
+"MFF2": {
+        "ScR": "WC94-R",
+        "year_for_calculations": 2024,
+        "Length": 49,
+        "Dip": 40,
+        "Seismogenic_Thickness": 15,
+        "SRmin": 3.6,
+        "SRmax": 5.4,
+        "Mobs": 6.4,
+        "sdMobs": 0.05,
+        "Last_eq_time": 2021,
+        "SCC": 0.205,
+        "ShearModulus": 3,
+        "StrainDrop": 3,
+        "Mmin": 5.5,
+        "b-value": 0.9
+    }
+
+}
