@@ -1,6 +1,6 @@
 #  FQSHA: An open-source software for Fault-Based Seismic Hazard Assessment
 
-![FQSHA](https://github.com/GeoSignalAnalysis/FQSHA/blob/main/logo.png)
+![FQSHA](https://github.com/GeoSignalAnalysis/FQSHA/blob/main/logo-1.png)
 
 # The main architucture of the software:
 
