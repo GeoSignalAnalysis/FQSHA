@@ -98,6 +98,8 @@ def gmpe_generate_xml(inputs, output_directory):
     print(f"GMPE XML file generated successfully in {output_directory}")
 
 
+
+
 def source_model_logic_tree(faults, output_directory):
     """
     Generates an OpenQuake source model logic tree XML file, including all fault names in the 'uncertaintyModel' section.
@@ -187,6 +189,7 @@ def source_model_logic_tree(faults, output_directory):
 #     print(f"job.ini file generated successfully in {output_directory}")
 
 
+
 # import os
 #
 # def calculate_bounds_from_fault_trace(faults):
@@ -266,7 +269,6 @@ def source_model_logic_tree(faults, output_directory):
 #
 import os
 
-
 def calculate_bounds_with_padding(faults, padding_factor=0.05):
     min_lat, max_lat = float('inf'), float('-inf')
     min_lon, max_lon = float('inf'), float('-inf')
@@ -291,7 +293,6 @@ def calculate_bounds_with_padding(faults, padding_factor=0.05):
 
     return min_lat, max_lat, min_lon, max_lon
 
-
 def generate_job_ini(inputs, output_directory, faults):
     # Calculate bounds if text edits are not filled
     min_lat = inputs['textEdit_7'] or calculate_bounds_with_padding(faults)[0]
@@ -302,91 +303,50 @@ def generate_job_ini(inputs, output_directory, faults):
     # Ensuring the coordinates are formatted as integers for the job.ini file
     region_coordinates = f"{min_lon} {max_lat}, {max_lon} {max_lat}, {max_lon} {min_lat}, {min_lon} {min_lat}"
 
-    if inputs['comboBox_2'] == 'event_based':
-        job_ini_content = f"""[general]
-        description = Fault.PSHA
-        calculation_mode = {inputs['comboBox_2']}
 
-        [geometry]
-        region = {region_coordinates}
-        region_grid_spacing = {inputs['textEdit_10']}
+    
 
-        [logic_tree]
-        number_of_logic_tree_samples = 1           
+    # Create job.ini content
+    job_ini_content = f"""[general]
+description = Fault.PSHA
+calculation_mode = {inputs['comboBox_2']}
 
-        [erf]
-        rupture_mesh_spacing = 0.4
-        width_of_mfd_bin = 0.1
-        area_source_discretization = 1
+[geometry]
+region = {region_coordinates}
+region_grid_spacing = {inputs['textEdit_10']}
 
-        [site_params]
-        reference_vs30_value = {inputs['textEdit_9']}
-        reference_vs30_type = inferred
-        reference_depth_to_2pt5km_per_sec = 2.0
-        reference_depth_to_1pt0km_per_sec = 100.0
+[logic_tree]
+number_of_logic_tree_samples = 1
 
-        [calculation_parameters]
-        ses_per_logic_tree_path = 100
-        number_of_ground_motion_fields = 100
+[erf]
+rupture_mesh_spacing = 0.4
+width_of_mfd_bin = 0.1
+area_source_discretization = 1
 
-        source_model_logic_tree_file = source_model_logic_tree.xml
-        gsim_logic_tree_file = gmpe_logic_tree.xml
-        intensity_measure_types_and_levels = {{{{"PGA": [0.01, 0.02, 0.04, 0.06, 0.08, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0]}}}}
-        truncation_level = 5
-        maximum_distance = 300
-        investigation_time = 50
+[site_params]
+reference_vs30_value = {inputs['textEdit_9']}
+reference_vs30_type = inferred
+reference_depth_to_2pt5km_per_sec = 2.0
+reference_depth_to_1pt0km_per_sec = 100.0
 
-        [output]
-        export_dir = {os.path.join(output_directory, "OutPut")}
-        individual_curves = true
-        mean_hazard_curves = true
-        quantile_hazard_curves = 0.05 0.5 0.95
-        uniform_hazard_spectra = true
-        hazard_maps = true
-        poes = 0.02, 0.1
-        """
-    else:
+[Calculation parameters]
+source_model_logic_tree_file = source_model_logic_tree.xml
+gsim_logic_tree_file = gmpe_logic_tree.xml
+intensity_measure_types_and_levels = {{"PGA": [0.01, 0.02, 0.04, 0.06, 0.08, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0]}}
+truncation_level = 5
+maximum_distance = 300
+number_of_ground_motion_fields = 0
+investigation_time = 50
 
-        job_ini_content = f"""[general]
-        description = Fault.PSHA
-        calculation_mode = {inputs['comboBox_2']}
-
-        [geometry]
-        region = {region_coordinates}
-        region_grid_spacing = {inputs['textEdit_10']}
-
-        [logic_tree]
-        number_of_logic_tree_samples = 1           
-
-        [erf]
-        rupture_mesh_spacing = 0.4
-        width_of_mfd_bin = 0.1
-        area_source_discretization = 1
-
-        [site_params]
-        reference_vs30_value = {inputs['textEdit_9']}
-        reference_vs30_type = inferred
-        reference_depth_to_2pt5km_per_sec = 2.0
-        reference_depth_to_1pt0km_per_sec = 100.0
-
-        [Calculation parameters]
-        source_model_logic_tree_file = source_model_logic_tree.xml
-        gsim_logic_tree_file = gmpe_logic_tree.xml
-        intensity_measure_types_and_levels = {{{{"PGA": [0.01, 0.02, 0.04, 0.06, 0.08, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0]}}}}
-        truncation_level = 5
-        maximum_distance = 300
-        number_of_ground_motion_fields = 0
-        investigation_time = 50
-
-        [output]
-        export_dir = {os.path.join(output_directory, "OutPut")}
-        individual_curves = true
-        mean_hazard_curves = true
-        quantile_hazard_curves = 0.05 0.5 0.95
-        uniform_hazard_spectra = true
-        hazard_maps = true
-        poes = 0.02, 0.1
-        """
+[output]
+export_dir = {os.path.join(output_directory, "OutPut")}
+individual_curves = true
+mean_hazard_curves = true
+quantile_hazard_curves = 0.05 0.5 0.95
+uniform_hazard_spectra = true
+hazard_maps = true
+poes = 0.02, 0.1
+"""
 
     # Save the job.ini content to the output directory, overwriting if exists
     os.makedirs(output_directory, exist_ok=True)
