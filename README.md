@@ -29,6 +29,7 @@ conda env create -f environment.yml
 conda activate FQSHA
 ```
 
+
 ## If someone experiences slow environment creation, they can add:
 
 
@@ -38,14 +39,23 @@ conda config --set channel_priority strict
 ```
 
 
+# After creating the environment and installing the necessary packages run this:
+
+```bash
+conda activate FQSHA
+chmod +x post_install.sh
+conda activate FQSHA
+./post_install.sh
+```
+
 
 
 ## How to run FQSHA 
-```bash
-conda activate FQSHA
-python ./FQSHA.py
 
+```bash
+python ./FQSHA.py
 ```
+
 
 
 ## Usage 
