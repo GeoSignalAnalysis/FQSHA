@@ -44,7 +44,6 @@ conda config --set channel_priority strict
 ```bash
 conda activate FQSHA
 chmod +x post_install.sh
-conda activate FQSHA
 ./post_install.sh
 ```
 
