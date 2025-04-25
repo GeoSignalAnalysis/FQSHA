@@ -19,24 +19,28 @@ FQSHA is primarily developed and tested on Debian-based Linux OS systems. Theref
 
 We greatly value community contributions and are steadfastly committed to continuously addressing and resolving any bugs that arise in the repository. Should you encounter any issues, please don't hesitate to contact us.
 
-We implement the FQSHA workflow using a FaultQuake conda environment:
+We implement the FQSHA workflow using a conda environment:
 
 ## Installation
 The installation guides for these environments are provided below:
 
-# FQSHA environment:
-Create and activate a conda environment, FQSHA, for detecting the primary events:
+```bash
+conda env create -f environment.yml
+conda activate FQSHA
+```
+
+## If someone experiences slow environment creation, they can add:
 
 
 ```bash
-conda create -n FQSHA python=3.10
-conda activate FQSHA
-pip install numpy scipy matplotlib PyQt5 statsmodels
-
+conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 
-## How to run FaultQuake 
+
+
+## How to run FQSHA 
 ```bash
 conda activate FQSHA
 python ./FQSHA.py
@@ -46,7 +50,7 @@ python ./FQSHA.py
 
 ## Usage 
 
-
+Read documentation for more guidance on installationa and running.
  
 
 ## To cite: 
