@@ -50,7 +50,7 @@ python ./FQSHA.py
 
 ## Usage 
 
-Read documentation for more guidance on installationa and running.
+Read documentation for more guidance on installation and running the software.
  
 
 ## To cite: 
