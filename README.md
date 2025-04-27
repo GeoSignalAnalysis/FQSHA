@@ -60,7 +60,20 @@ python ./FQSHA.py
 ## Usage 
 
 Read documentation for more guidance on installation and running the software.
- 
+
+
+
+# Running the test codes by:
+
+```bash
+coverage erase
+PYTHONPATH=. coverage run --include="tests/test_sactivityrate_xmlExport.py" -m pytest tests/test_sactivityrate_xmlExport.py
+coverage report -m
+
+coverage erase
+PYTHONPATH=. coverage run -m pytest tests/test_gui.py
+coverage report
+```
 
 ## To cite: 
 
