@@ -49,7 +49,7 @@ Recommended if you're **just using the GUI** or integrating it into Python scrip
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/fqsha.git
+git clone https://github.com/GeoSignalAnalysis/FQSHA
 cd fqsha
 
 # Install with core dependencies
@@ -71,7 +71,7 @@ If you want to run/debug it in **IDE**, this is recommended.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/fqsha.git
+git clone https://github.com/GeoSignalAnalysis/FQSHA,git
 cd fqsha
 
 # Create and activate Conda environment
