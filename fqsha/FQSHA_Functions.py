@@ -27,7 +27,6 @@ import numpy as np
 from scipy.optimize import minimize
 from scipy.stats import norm
 import json
-# from scipy.integrate import trapezoid
 from scipy.integrate import trapezoid
 
 
