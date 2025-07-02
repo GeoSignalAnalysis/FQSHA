@@ -142,7 +142,6 @@ FQSHA is distributed under the [AGPL-3.0-or-later](https://www.gnu.org/licenses/
 
 ## 📈 Future Enhancements
 
-- Advanced SAR models
-- Extended OpenQuake capabilities
-- Validation using GEM datasets
-- National-scale hazard integration
+- Advanced SAR models of faults
+- OpenQuake connection
+- Mapping 
