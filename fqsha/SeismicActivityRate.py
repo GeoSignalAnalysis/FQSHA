@@ -25,7 +25,7 @@ import matplotlib.patches as mpatches
 from FQSHA_Functions import TruncatedGR, CHGaussPoiss, CHGaussBPT
 from FQSHA_Functions import kin2coeff, coeff2mag, conflate_pdfs
 import numpy as np
-# from scipy.integrate import trapezoid
+#from scipy.integrate import trapezoid
 
 
 def momentbudget(faults, Zeta, Khi, Siggma, ProjFol, logical_nan, logical_nan_sdmag):
