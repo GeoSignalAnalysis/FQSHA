@@ -1,6 +1,6 @@
 #  FQSHA: An open-source software for Fault-Based Seismic Hazard Assessment
 
-**FQSHA** (Fault-based Quantitative Seismic Hazard Assessment) is an open-source Python software package designed to streamline fault-based PSHA (Probabilistic Seismic Hazard Assessment). It features a GUI and integrates tightly with the OpenQuake engine and GMT for modeling and visualization.
+**FQSHA** (Fault-based Seismic Hazard Assessment) is an open-source Python software package designed to streamline fault-based PSHA (Probabilistic Seismic Hazard Assessment). It features a GUI and integrates tightly with the OpenQuake engine and GMT for modeling and visualization.
 
 ![FQSHA](https://github.com/GeoSignalAnalysis/FQSHA/blob/main/logo-1.png)
 
