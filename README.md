@@ -57,6 +57,7 @@ cd fqsha
 pip install .
 # To include optional dependencies:
 pip install .[gmt]     # for PyGMT support
+conda install -c conda-forge gdal
 pip install .[gdal]    # for GDAL/Fiona support
 pip install .[dev]     # for testing and development
 pip install fiona
