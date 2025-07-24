@@ -71,7 +71,8 @@ If you want to run/debug it in **IDE**, this is recommended.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/fqsha.git
+git clone git clone https://github.com/GeoSignalAnalysis/FQSHA.git
+
 cd fqsha
 
 # Create and activate Conda environment
