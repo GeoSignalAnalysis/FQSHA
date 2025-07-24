@@ -20,7 +20,7 @@ Created on October 2024
 
 @authors: Nasrin Tavakolizadeh, Hamzeh Mohammadigheymasi
 """
-import self
+# import self
 from fontTools.merge import layout
 from openquake.hazardlib.valid import mag_scale_rel
 
