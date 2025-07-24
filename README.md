@@ -49,16 +49,18 @@ Recommended if you're **just using the GUI** or integrating it into Python scrip
 
 ```bash
 # Clone the repository
+conda create -n fqsha python=3.10
+conda activate fqsha
 git clone https://github.com/GeoSignalAnalysis/fqsha.git
 cd fqsha
-
 # Install with core dependencies
 pip install .
-
 # To include optional dependencies:
 pip install .[gmt]     # for PyGMT support
 pip install .[gdal]    # for GDAL/Fiona support
 pip install .[dev]     # for testing and development
+pip install fiona
+conda install -c conda-forge gmt=6
 ```
 
 ---
@@ -71,8 +73,9 @@ If you want to run/debug it in **IDE**, this is recommended.
 
 ```bash
 # Clone the repository
+conda create -n fqsha python=3.10
+conda activate fqsha
 git clone git clone https://github.com/GeoSignalAnalysis/fqsha.git
-
 cd fqsha
 
 # Create and activate Conda environment
