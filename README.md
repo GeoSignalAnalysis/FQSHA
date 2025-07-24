@@ -49,7 +49,7 @@ Recommended if you're **just using the GUI** or integrating it into Python scrip
 
 ```bash
 # Clone the repository
-git clone https://github.com/GeoSignalAnalysis/FQSHA.git
+git clone https://github.com/GeoSignalAnalysis/fqsha.git
 cd fqsha
 
 # Install with core dependencies
@@ -71,7 +71,7 @@ If you want to run/debug it in **IDE**, this is recommended.
 
 ```bash
 # Clone the repository
-git clone git clone https://github.com/GeoSignalAnalysis/FQSHA.git
+git clone git clone https://github.com/GeoSignalAnalysis/fqsha.git
 
 cd fqsha
 
