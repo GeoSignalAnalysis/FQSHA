@@ -61,8 +61,7 @@ conda install -c conda-forge gmt=6
 ```bash
 python -c "import numpy; print(numpy.__version__)"
 ```
-
-#### If the numpy version is not equal to 1.24.04, downgrade the numpy:
+double check the numpy version if it is not equal to 1.24.04, downgrade numpy:
 
 ```bash
 pip uninstall numpy
