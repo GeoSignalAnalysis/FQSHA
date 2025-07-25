@@ -24,12 +24,12 @@ Created on October 2024
 from fontTools.merge import layout
 from openquake.hazardlib.valid import mag_scale_rel
 
-from SeismicActivityRate import momentbudget, sactivityrate  # Import the function
-from FQSHA_Functions import export_faults_to_xml
-from OpenQuake_input_generator import gmpe_generate_xml
-from OpenQuake_input_generator import source_model_logic_tree
-from OpenQuake_input_generator import generate_job_ini
-from Mapping import create_contour_map_with_faults
+from .SeismicActivityRate import momentbudget, sactivityrate  # Import the function
+from .FQSHA_Functions import export_faults_to_xml
+from .OpenQuake_input_generator import gmpe_generate_xml
+from .OpenQuake_input_generator import source_model_logic_tree
+from .OpenQuake_input_generator import generate_job_ini
+from .Mapping import create_contour_map_with_faults
 import sys, argparse, json
 
 
