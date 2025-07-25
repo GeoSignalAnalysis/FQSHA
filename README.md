@@ -54,11 +54,20 @@ pip install .[gdal]    # for GDAL/Fiona support
 pip install .[dev]     # for testing and development
 pip install fiona
 conda install -c conda-forge gmt=6
-double check the numpy version in terminal:
 
+
+#### double check the numpy version in terminal:
+
+```bash
 python -c "import numpy; print(numpy.__version__)"
+```
 
+#### If the numpy version is not equal to 1.24.04, downgrade the numpy:
 
+```bash
+pip uninstall numpy
+pip install numpy==1.24.04
+```
 
 
 ```
