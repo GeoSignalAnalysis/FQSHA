@@ -96,7 +96,6 @@ dependencies:
       - django==4.2.23
       - docutils==0.21.2
       - fonttools==4.59.0
-      - fqsha==0.1.0
       - h5py==3.14.0
       - idna==3.10
       - kiwisolver==1.4.8
