@@ -43,7 +43,7 @@ You can install FQSHA in two ways:
 
 ---
 
-### ⚙️ Option 1: Install as a Standalone Python Package (with `pip`)
+### ⚙️ Linux installation: Installin on a Conda env:
 
 Recommended if you're **just using the GUI** or integrating it into Python scripts.
 
@@ -52,7 +52,7 @@ Recommended if you're **just using the GUI** or integrating it into Python scrip
 conda create -n fqsha python=3.10
 conda activate fqsha
 git clone https://github.com/GeoSignalAnalysis/fqsha.git
-cd fqsha
+cd fqshaL
 # Install with core dependencies
 pip install .
 # To include optional dependencies:
