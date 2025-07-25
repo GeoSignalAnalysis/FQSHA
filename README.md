@@ -137,6 +137,7 @@ FQSHA/
 
 ## 🛠️ Installation Guide in Windows
 Follow the guidance in FQSHA_InstallationGuide_Windows.txt
+
 The requirements are included in the fsha_windows_env.yml.
 
 
