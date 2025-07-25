@@ -6,7 +6,7 @@
 
 # The main architucture of the software:
 
-![FQSHA](https://github.com/GeoSignalAnalysis/FQSHA/blob/main/Software_architecture7.png)
+![FQSHA](https://github.com/GeoSignalAnalysis/FQSHA/blob/main/Software_architecture.png)
 
 
 This software combines the algorithm introduced by FaultQuake and the Open Quake engine to calculate the fault's seismic hazard.
