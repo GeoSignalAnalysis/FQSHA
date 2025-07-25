@@ -64,6 +64,18 @@ pip install fiona
 conda install -c conda-forge gmt=6
 ```
 
+## 🚀 Running  FQSHA on Linux
+### GUI Launch
+
+```bash
+python fqshaL/FQSHA.py
+```
+
+### Run from PyCharm
+In an IDE of your choice, right-click `FQSHA.py` > Run.
+
+---
+
 ---
 
 ### 💻 Windows Installation: 
