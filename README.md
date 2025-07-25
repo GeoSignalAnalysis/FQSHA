@@ -36,9 +36,7 @@ You can install FQSHA in two ways:
 ---
 
 ### ⚙️ Linux installation: Installing on a Conda env:
-
 Recommended if you're **just using the GUI** or integrating it into Python scripts.
-
 ```bash
 # Clone the repository
 conda create -n fqsha python=3.10
@@ -55,17 +53,10 @@ pip install .[dev]     # for testing and development
 pip install fiona
 conda install -c conda-forge gmt=6
 
-
-#### double check the numpy version in terminal:
-
-python -c "import numpy; print(numpy.__version__)"
-
 # double check the numpy version if it is not equal to 1.24.04, downgrade numpy:
-
+python -c "import numpy; print(numpy.__version__)"
 pip uninstall numpy
 pip install numpy==1.24.04
-
-
 ```
 
 ## 🚀 Running  FQSHA on Linux
