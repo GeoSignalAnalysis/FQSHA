@@ -37,7 +37,7 @@ We greatly value community contributions and are steadfastly committed to contin
 
 ---
 
-## 🛠️ Installation Guide
+## 🛠️ Installation Guide in Ubuntu
 
 You can install FQSHA in two ways:
 
@@ -133,6 +133,12 @@ FQSHA/
 ```
 
 ---
+
+
+## 🛠️ Installation Guide in Windows
+Follow the guidance in FQSHA_InstallationGuide_Windows.txt
+The requirements are included in the fsha_windows_env.yml.
+
 
 ## 👥 Authors
 
