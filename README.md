@@ -52,7 +52,7 @@ Recommended if you're **just using the GUI** or integrating it into Python scrip
 conda create -n fqsha python=3.10
 conda activate fqsha
 git clone https://github.com/GeoSignalAnalysis/fqsha.git
-cd fqshaL
+cd fqsha
 # Install with core dependencies
 pip install .
 # To include optional dependencies:
