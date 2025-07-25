@@ -18,6 +18,8 @@
 
 import math
 import numpy as np
+import warnings as py_warnings
+warnings.filterwarnings("ignore", category=py_warnings.RankWarning)
 import os
 from scipy.stats import norm, invgauss
 import matplotlib.pyplot as plt
