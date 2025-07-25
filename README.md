@@ -43,7 +43,7 @@ You can install FQSHA in two ways:
 
 ---
 
-### ⚙️ Linux installation: Installin on a Conda env:
+### ⚙️ Linux installation: Installing on a Conda env:
 
 Recommended if you're **just using the GUI** or integrating it into Python scripts.
 
