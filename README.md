@@ -29,13 +29,13 @@ We greatly value community contributions and are steadfastly committed to contin
 
 ---
 
-## 🛠️ Installation Guide:
+# 🛠️ Installation Guide:
 
 You can install FQSHA in two ways:
 
 ---
 
-### ⚙️ Linux installation: Installing on a Conda env:
+## ⚙️ Linux installation: Installing on a Conda env:
 Recommended if you're **just using the GUI** or integrating it into Python scripts.
 ```bash
 # Clone the repository
@@ -72,10 +72,7 @@ In an IDE of your choice, right-click `FQSHA.py` > Run.
 ---
 
 ---
-
-### 💻 Windows Installation: 
-
-# 🛠️ FQSHA Installation Guide (Windows 11)
+## 🛠️ FQSHA Installation Guide (Windows 11)
 
 This guide outlines the full setup of the FQSHA toolkit on Windows 11, including GMT, Ghostscript, and the Python environment with PyGMT and OpenQuake dependencies.
 
