@@ -13,7 +13,7 @@ This software combines the algorithm introduced by FaultQuake and the Open Quake
 ![FaultQuake](https://github.com/GeoSignalAnalysis/FaultQuake/blob/main/FaultQuake_workflow.png)
 
 
-FQSHA is primarily developed and tested on Debian-based Linux OS systems. Therefore, we suggest using FQSHA in such environments for the best experience. While it's possible to use FQSHA on Windows and macOS, there may be challenges during compiling and running the workflow due to potential compatibility issues.
+FQSHA has been developed and tested both on Debian-based Linux OS systems and Windows 11. While it's possible to use FQSHA on macOS, there may be challenges during compiling and running the workflow due to potential compatibility issues.
 
 We greatly value community contributions and are steadfastly committed to continuously addressing and resolving any bugs that arise in the repository. Should you encounter any issues, please don't hesitate to contact us.
 ## Installation
@@ -74,7 +74,6 @@ In an IDE of your choice, right-click `FQSHA.py` > Run.
 ---
 
 ### 💻 Windows Installation: 
-
 
 # 🛠️ FQSHA Installation Guide (Windows 11)
 
