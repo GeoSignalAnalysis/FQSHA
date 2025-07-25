@@ -37,7 +37,7 @@ We greatly value community contributions and are steadfastly committed to contin
 
 ---
 
-## 🛠️ Installation Guide in Ubuntu
+## 🛠️ Installation Guide:
 
 You can install FQSHA in two ways:
 
@@ -66,7 +66,7 @@ conda install -c conda-forge gmt=6
 
 ---
 
-### 💻 Option 2: Set Up with Conda
+### 💻 Windows Installation: 
 
 If you want to run/debug it in **IDE**, this is recommended.
 
