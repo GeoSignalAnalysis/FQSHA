@@ -57,6 +57,9 @@ conda install -c conda-forge gmt=6
 python -c "import numpy; print(numpy.__version__)"
 pip uninstall numpy
 pip install numpy==1.24.04
+
+conda install -c conda-forge 'gdal>=3.6,<3.9' 'sqlite>=3.41'
+
 ```
 
 ## 🚀 Running  FQSHA on Linux
