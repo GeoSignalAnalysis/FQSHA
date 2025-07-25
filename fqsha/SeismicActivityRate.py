@@ -15,11 +15,9 @@
 # along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 
-
 import math
 import numpy as np
-import warnings as py_warnings
-warnings.filterwarnings("ignore", category=py_warnings.RankWarning)
+from numpy.polynomial.polyutils import RankWarning
 import os
 from scipy.stats import norm, invgauss
 import matplotlib.pyplot as plt
