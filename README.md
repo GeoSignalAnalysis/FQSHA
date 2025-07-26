@@ -129,7 +129,7 @@ export GMT_LIBRARY_PATH=$(gmt --show-libdir)
 
 ---
 
-## 6. To Run FQSHA
+## 6. To Run FQSHA in Ubuntu
 
 ```bash
 python fqshaL/FQSHA.py
