@@ -152,7 +152,6 @@ fqsha/
 ├── FQSHA.py                  # GUI Launcher
 ├── README.md
 ├── pyproject.toml
-├── requirements.txt
 ```
 
 ---
