@@ -26,237 +26,152 @@ We greatly value community contributions and are steadfastly committed to contin
 - GMT visualization of hazard maps
 - Modular design suitable for extensions
 - Optional support for PyGMT, GDAL, and Fiona
-
+- GUI built with PyQt5
 ---
 
-# 🛠️ Installation Guide:
+## 🛠 Installation Instructions
 
 You can install FQSHA in two ways:
 
 ---
 
-## ⚙️ Linux installation: Installing on a Conda env:
-Recommended if you're **just using the GUI** or integrating it into Python scripts.
-```bash
+## 🚀 Running  FQSHA on Linux
+
+This guide helps install FQSHA and its dependencies across platforms. **Python 3.10 or higher is required**.
+
+---
+
 # Clone the repository
+```
 conda create -n fqsha python=3.10
 conda activate fqsha
 git clone https://github.com/GeoSignalAnalysis/fqsha.git
-cd fqsha
-# Install with core dependencies
+cd fqsha  # You should be in the directory of the downloaded folder for the installation.
+```
+
+### ✅ 1. Core Installation
+
+Install the main package using pip:
+
+```bash
 pip install .
-# To include optional dependencies:
-pip install .[gmt]     # for PyGMT support
-conda install -c conda-forge gdal
-pip install .[gdal]    # for GDAL/Fiona support
-pip install .[dev]     # for testing and development
-pip install fiona
-conda install -c conda-forge gmt=6
+```
 
-# double check the numpy version if it is not equal to 1.24.04, downgrade numpy:
+---
+
+### ⚠️ 2. NumPy Compatibility Warning
+
+> **IMPORTANT:** You must use `numpy==1.24.4`  
+> This version is required for compatibility with OpenQuake and GDAL.  
+> Newer versions (e.g., 2.x) are **not compatible** and may cause runtime errors.
+
+Check your version:
+
+```bash
 python -c "import numpy; print(numpy.__version__)"
+```
+
+If the version is not `1.24.4`, run:
+
+```bash
 pip uninstall numpy
-pip install numpy==1.24.04
-
-conda install -c conda-forge 'gdal>=3.6,<3.9' 'sqlite>=3.41'
-
+pip install numpy==1.24.4
 ```
 
-## 🚀 Running  FQSHA on Linux
-### GUI Launch
+---
+
+### 🔁 3. Optional Features
+
+#### 🗺️ PyGMT for Mapping
+
+Enable GMT-based visualization using PyGMT:
 
 ```bash
-python fqshaL/FQSHA.py
+pip install .[gmt]
 ```
 
-### Run from PyCharm
-In an IDE of your choice, right-click `FQSHA.py` > Run.
-
 ---
 
----
-## 🛠️ FQSHA Installation Guide (Windows 11)
+#### 🧪 Development and Testing
 
-This guide outlines the full setup of the FQSHA toolkit on Windows 11, including GMT, Ghostscript, and the Python environment with PyGMT and OpenQuake dependencies.
-
----
-
-## ✅ 1. Install GMT (Generic Mapping Tools)
-
-1. **Uninstall** any existing GMT 5.x installation if present.
-2. Download GMT 6.x from the official website:  
-   https://www.generic-mapping-tools.org/download/
-3. Run the installer and install GMT to:  
-   `C:\Program Files\GMT6\`
-4. During installation, make sure to **check** the option to  
-   **"Add GMT to the system PATH"**.
-
----
-
-## ✅ 2. Install Ghostscript
-
-1. Download the latest 64-bit Ghostscript for Windows from:  
-   https://ghostscript.com/download/gsdnld.html
-2. Install it to the default directory:  
-   `C:\Program Files\gs\gs10.06.0\`
-3. Add the following to your system `PATH` environment variable:  
-   `C:\Program Files\gs\gs10.06.0\bin`
-
----
-
-## ✅ 3. Configure Environment Variable for GMT (if needed)
-
-If PyGMT cannot locate GMT automatically, manually set the following environment variable:
-
-- **Variable name:** `GMT_LIBRARY_PATH`  
-- **Value:** `C:\Program Files\GMT6\bin`
-
----
-
-## ✅ 4. Clone and Navigate to the FQSHA Project
+Install tools for unit testing and coverage:
 
 ```bash
-git clone https://github.com/yourusername/FQSHA.git
-cd FQSHA
-
-
-
-✅ 5. Set Up the Conda Environment
-
-
-Option A: Reproduce full environment from .yml file
-If you want to install using yml file (fqsha_windows_env.yml), run:
-
-conda env create -f fqsha_windows_env.yml
-conda activate fqsha_env
-
-
-Option B: Manual setup: Without .yml file
-
-conda create -n fqsha_env python=3.10
-conda activate fqsha_env
-conda install -c conda-forge pygmt openquake pandas
-pip install -r requirements.txt
-
-
-✅ 6. Run the FQSHA Toolkit
-
-You must be inside the extracted package directory (fqsha/). Then, run:
-
-
-python -m fqsha
-
-
-✅ 7. Verify Installation (Optional Test)
-
-import pygmt
-fig = pygmt.Figure()
-fig.basemap(region=[0, 10, 0, 10], projection="X10c/10c", frame=True)
-fig.show()
-
-
-
-## 📝 Notes
-These commands assume you're using Anaconda Prompt.
-
-If you see ModuleNotFoundError, make sure you're inside the correct directory (fqsha/) and the environment is activated.
-
-The environment has been tested on Windows 11, using:
-
-Python 3.10
-
-GMT 6.5+
-
-Ghostscript 10.06
-
-PyGMT 0.10
-
-
-If you want to run/debug it in **IDE**, this is recommended.
-
-#### Step-by-step:
-
-```bash
-# Clone the repository
-conda create -n fqsha python=3.10
-conda activate fqsha
-git clone git clone https://github.com/GeoSignalAnalysis/fqsha.git
-cd fqsha
-
-# Create and activate Conda environment
-conda env create -f environment.yml
-conda activate fqsha
+pip install .[dev]
 ```
 
-Then in **PyCharm or any IDE**:
-1. Open the project directory.
-2. Go to **Settings > Project > Python Interpreter**
-3. Set the interpreter to: `conda environments, and select fqsha`
-4. You can now run `FQSHA.py` as the entry point.
+---
+
+### 🧭 4. GDAL and Fiona (Required for GIS and Shapefiles)
+
+> ⚠️ On **Linux/Ubuntu**, do **not** install GDAL via pip. It may fail to build native dependencies.  
+> Always use **Conda** to install GDAL and Fiona:
+
+```bash
+conda install -c conda-forge 'gdal>=3.6,<3.9' fiona sqlite
+```
 
 ---
 
-## 🚀 Running FQSHA
+### 🌍 5. Install GMT for PyGMT
 
-### GUI Launch
+If using PyGMT, install GMT version 6 using Conda:
 
 ```bash
-python fqsha/FQSHA.py
+conda install -c conda-forge gmt=6
 ```
 
-### Run from PyCharm
-In an IDE of your choice, right-click `FQSHA.py` > Run.
+> On Linux, PyGMT may not find the GMT library automatically. Set this environment variable if needed:
+
+```bash
+export GMT_LIBRARY_PATH=$(gmt --show-libdir)
+```
 
 ---
 
-## 🧪 Development & Testing
+## ✅ Summary Table
 
-```bash
-coverage erase
-PYTHONPATH=. coverage run --include="tests/test_sactivityrate_xmlExport.py" -m pytest tests/test_sactivityrate_xmlExport.py
-coverage report -m
+| Component        | How to Install                                      |
+|------------------|-----------------------------------------------------|
+| Core             | `pip install .`                                     |
+| NumPy (required) | `pip install numpy==1.24.4`                         |
+| PyGMT support    | `pip install .[gmt]` + `conda install gmt=6`        |
+| GDAL/Fiona       | `conda install -c conda-forge gdal fiona sqlite`    |
+| Development      | `pip install .[dev]`                                |
 
-coverage erase
-PYTHONPATH=. coverage run -m pytest tests/test_gui.py
-coverage report
-```
-
+---
 
 ## 📂 Project Structure
 
 ```
-FQSHA/
-├── FQSHA.py                # Main GUI script
-├── FQSHA_Functions.py      # Core logic
-├── OpenQuake_input_generator.py
-├── SeismicActivityRate.py
-├── Mapping.py
-├── input_data/             # Input files
-├── output_files/           # Output folders
-└── tests/                  # Test scripts
+fqsha/
+├── fqsha/                    # Core source code
+├── input_data/               # User inputs (fault data, config)
+├── FQSHA_output/             # Auto-generated outputs (OpenQuake, maps)
+├── tests/                    # Unit tests
+├── FQSHA.py                  # GUI Launcher
+├── README.md
+├── pyproject.toml
+├── requirements.txt
 ```
 
 ---
 
+## 📧 Contact
 
-## 🛠️ Installation Guide in Windows
-Follow the guidance in FQSHA_InstallationGuide_Windows.txt
+For bug reports or feature requests, please open an issue on [GitHub](https://github.com/GeoSignalAnalysis/fqsha).
 
-The requirements are included in the fsha_windows_env.yml
-
-
-## 👥 Authors
-
-- **Nasrin Tavakolizadeh** — [n.tavakolizadeh@ubi.pt](mailto:n.tavakolizadeh@ubi.pt)
-- **Hamzeh Mohammadigheymasi**
+Lead Developers:
+- Nasrin Tavakolizadeh (n.tavakolizadeh@ubi.pt)
+- Hamzeh Mohammadigheymasi
+- Nuno Pombo
 
 ---
 
-## 📄 License
+## 📜 License
 
-FQSHA is distributed under the [AGPL-3.0-or-later](https://www.gnu.org/licenses/agpl-3.0.html) license.
+This project is licensed under the **AGPL-3.0-or-later** license. See the [LICENSE](./LICENSE) file for details.
 
----
 
 ## 📈 Future Enhancements
 
@@ -264,6 +179,13 @@ FQSHA is distributed under the [AGPL-3.0-or-later](https://www.gnu.org/licenses/
 - Extended OpenQuake capabilities
 - Validation using GEM datasets
 - National-scale hazard integration
+
+
+## 🛠️ Installation Guide in Windows
+Follow the guidance in FQSHA_InstallationGuide_Windows.txt
+
+The requirements are included in the fsha_windows_env.yml
+
 
 
 ## Usage 
