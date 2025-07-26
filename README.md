@@ -59,26 +59,6 @@ pip install .
 
 ---
 
-### ⚠️ 2. NumPy Compatibility Warning
-
-> **IMPORTANT:** You must use `numpy==1.24.4`  
-> This version is required for compatibility with OpenQuake and GDAL.  
-> Newer versions (e.g., 2.x) are **not compatible** and may cause runtime errors.
-
-Check your version:
-
-```bash
-python -c "import numpy; print(numpy.__version__)"
-```
-
-If the version is not `1.24.4`, run:
-
-```bash
-pip uninstall numpy
-pip install numpy==1.24.4
-```
-
----
 
 ### 🔁 3. Optional Features
 
@@ -111,6 +91,26 @@ pip install .[dev]
 conda install -c conda-forge 'gdal>=3.6,<3.9' fiona sqlite
 ```
 
+---
+
+### ⚠️ 2. NumPy Compatibility Warning
+
+> **IMPORTANT:** You must use `numpy==1.24.4`  
+> This version is required for compatibility with OpenQuake and GDAL.  
+> Newer versions (e.g., 2.x) are **not compatible** and may cause runtime errors.
+
+Check your version:
+
+```bash
+python -c "import numpy; print(numpy.__version__)"
+```
+
+If the version is not `1.24.4`, run:
+
+```bash
+pip uninstall numpy
+pip install numpy==1.24.4
+```
 ---
 
 ### 🌍 5. Install GMT for PyGMT
