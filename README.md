@@ -129,6 +129,14 @@ export GMT_LIBRARY_PATH=$(gmt --show-libdir)
 
 ---
 
+## 6. To Run FQSHA
+
+```bash
+python fqshaL/FQSHA.py
+ 
+```
+
+
 ## ✅ Summary Table
 
 | Component        | How to Install                                      |
