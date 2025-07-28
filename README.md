@@ -164,16 +164,6 @@ fqsha/
 
 ---
 
-## 📧 Contact
-
-For bug reports or feature requests, please open an issue on [GitHub](https://github.com/GeoSignalAnalysis/fqsha).
-Developers:
-- Nasrin Tavakolizadeh (n.tavakolizadeh@ubi.pt)
-- Hamzeh Mohammadigheymasi
-
-
----
-
 ## 📜 License
 
 This project is licensed under the **AGPL-3.0-or-later** license. See the [LICENSE](./LICENSE) file for details.
