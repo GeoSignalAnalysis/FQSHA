@@ -167,11 +167,10 @@ fqsha/
 ## 📧 Contact
 
 For bug reports or feature requests, please open an issue on [GitHub](https://github.com/GeoSignalAnalysis/fqsha).
-
-Lead Developers:
+Developers:
 - Nasrin Tavakolizadeh (n.tavakolizadeh@ubi.pt)
 - Hamzeh Mohammadigheymasi
-- Nuno Pombo
+
 
 ---
 
