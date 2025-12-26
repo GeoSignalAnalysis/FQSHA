@@ -194,7 +194,17 @@ Read documentation for more guidance on installation and running the software.
 
 BibTex:
 ```
-
+@article{FQSHA2025,
+title = {FQSHA: An open-source Python software for fault-based seismic hazard assessment},
+journal = {SoftwareX},
+volume = {32},
+pages = {102339},
+year = {2025},
+issn = {2352-7110},
+doi = {https://doi.org/10.1016/j.softx.2025.102339},
+url = {https://www.sciencedirect.com/science/article/pii/S235271102500305X},
+author = {Nasrin Tavakolizadeh and Hamzeh Mohammadigheymasi and Nuno Pombo},
+}
 
 ```
 
