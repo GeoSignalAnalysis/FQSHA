@@ -23,7 +23,7 @@ dependencies:
       - numba==0.63.1
       - numpy==1.24.4
       - openquake-engine==3.23.0
-      - -e ./fqsha
+      - -e .
       - pandas==2.3.3
       - pygmt==0.13.0
       - pyproj==3.7.1
