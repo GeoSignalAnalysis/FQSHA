@@ -16,22 +16,32 @@ This software combines the algorithm introduced by FaultQuake and the Open Quake
 FQSHA has been developed and tested both on Debian-based Linux OS systems and Windows 11. While it's possible to use FQSHA on macOS, there may be challenges during compiling and running the workflow due to potential compatibility issues.
 
 We greatly value community contributions and are steadfastly committed to continuously addressing and resolving any bugs that arise in the repository. Should you encounter any issues, please don't hesitate to contact us.
-## Installation
----
-
-## 🚀 Features
-
-- GUI for computing fault-based Seismic Activity Rates (SAR)
-- Integration with [OpenQuake](https://github.com/gem/oq-engine) for hazard calculations
-- GMT visualization of hazard maps
-- Modular design suitable for extensions
-- Optional support for PyGMT, GDAL, and Fiona
-- GUI built with PyQt5
----
-
 ## 🛠 Installation Instructions
+**Python 3.10 is required**.
 
-You can install FQSHA in two ways:
+You can install FQSHA and all dependencies (including GDAL, GMT, and OpenQuake) in one step using Conda.
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/GeoSignalAnalysis/fqsha.git
+   cd fqsha
+   ```
+
+2. **Create the Conda Environment**:
+   ```bash
+   conda env create -f environment.yml
+   ```
+
+3. **Activate the Environment**:
+   ```bash
+   conda activate fqsha
+   ```
+
+This will install:
+- Core FQSHA package (in editable mode)
+- OpenQuake Engine, PyGMT, GDAL, Fiona
+- Compatible NumPy version
+- All development and testing tools
 
 ---
 
