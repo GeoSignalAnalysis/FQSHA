@@ -59,84 +59,34 @@ git clone https://github.com/GeoSignalAnalysis/fqsha.git
 cd fqsha  # You should be in the directory of the downloaded folder for the installation.
 ```
 
-### ✅ 1. Core Installation
+## 🛠 Installation Instructions
+**Python 3.10 is required**.
 
-Install the main package using pip:
+You can install FQSHA and all dependencies (including GDAL, GMT, and OpenQuake) in one step using Conda.
 
-```bash
-pip install .
-```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/GeoSignalAnalysis/fqsha.git
+   cd fqsha
+   ```
 
----
+2. **Create the Conda Environment**:
+   ```bash
+   conda env create -f environment.yml
+   ```
 
+3. **Activate the Environment**:
+   ```bash
+   conda activate fqsha2
+   ```
 
-### 🔁 3. Optional Features
-
-#### 🗺️ PyGMT for Mapping
-
-Enable GMT-based visualization using PyGMT:
-
-```bash
-pip install .[gmt]
-```
-
----
-
-#### 🧪 Development and Testing
-
-Install tools for unit testing and coverage:
-
-```bash
-pip install .[dev]
-```
+This will install:
+- Core FQSHA package (in editable mode)
+- OpenQuake Engine, PyGMT, GDAL, Fiona
+- Compatible NumPy version
+- All development and testing tools
 
 ---
-
-### 🧭 4. GDAL and Fiona (Required for GIS and Shapefiles)
-
-> ⚠️ On **Linux/Ubuntu**, do **not** install GDAL via pip. It may fail to build native dependencies.  
-> Always use **Conda** to install GDAL and Fiona:
-
-```bash
-conda install -c conda-forge 'gdal>=3.6,<3.9' fiona sqlite
-```
-
----
-
-### ⚠️ 2. NumPy Compatibility Warning
-
-> **IMPORTANT:** You must use `numpy==1.24.4`  
-> This version is required for compatibility with OpenQuake and GDAL.  
-> Newer versions (e.g., 2.x) are **not compatible** and may cause runtime errors.
-
-Check your version:
-
-```bash
-python -c "import numpy; print(numpy.__version__)"
-```
-
-If the version is not `1.24.4`, run:
-
-```bash
-pip uninstall numpy
-pip install numpy==1.24.4
-```
----
-
-### 🌍 5. Install GMT for PyGMT
-
-If using PyGMT, install GMT version 6 using Conda:
-
-```bash
-conda install -c conda-forge gmt=6
-```
-
-> On Linux, PyGMT may not find the GMT library automatically. Set this environment variable if needed:
-
-```bash
-export GMT_LIBRARY_PATH=$(gmt --show-libdir)
-```
-
 ---
 
 ## 6. To Run FQSHA in Ubuntu
