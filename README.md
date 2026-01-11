@@ -77,7 +77,7 @@ You can install FQSHA and all dependencies (including GDAL, GMT, and OpenQuake) 
 
 3. **Activate the Environment**:
    ```bash
-   conda activate fqsha2
+   conda activate fqsha
    ```
 
 This will install:
