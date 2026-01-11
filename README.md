@@ -96,19 +96,6 @@ python fqshaL/FQSHA.py
  
 ```
 
-
-## ✅ Summary Table
-
-| Component        | How to Install                                      |
-|------------------|-----------------------------------------------------|
-| Core             | `pip install .`                                     |
-| NumPy (required) | `pip install numpy==1.24.4`                         |
-| PyGMT support    | `pip install .[gmt]` + `conda install gmt=6`        |
-| GDAL/Fiona       | `conda install -c conda-forge gdal fiona sqlite`    |
-| Development      | `pip install .[dev]`                                |
-
----
-
 ## 📂 Project Structure
 
 ```
