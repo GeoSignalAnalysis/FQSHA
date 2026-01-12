@@ -15,7 +15,23 @@ This software combines the algorithm introduced by FaultQuake and the Open Quake
 
 FQSHA has been developed and tested both on Debian-based Linux OS systems and Windows 11. While it's possible to use FQSHA on macOS, there may be challenges during compiling and running the workflow due to potential compatibility issues.
 
-We greatly value community contributions and are steadfastly committed to continuously addressing and resolving any bugs that arise in the repository. Should you encounter any issues, please don't hesitate to contact us.
+We greatly value community contributions and are steadfastly committed to continuously addressing and resolving any bugs that arise in the repository. Should you encounter any issues, please don't hesitate to contact us: Nasrin Tavakolizadeh (n.tavakolizadeh@ubi.pt), Hamzeh Mohammadigheymasi (hamzeh@ubi.pt)
+
+
+## 📂 Project Structure
+
+```
+fqsha/
+├── fqsha/                    # Core source code
+├── input_data/               # User inputs (fault data, config)
+├── FQSHA_output/             # Auto-generated outputs (OpenQuake, maps)
+├── tests/                    # Unit tests
+├── FQSHA.py                  # GUI Launcher
+├── README.md
+├── pyproject.toml
+```
+
+
 
 ## 🛠 Installation Instructions Linux 
 
@@ -53,18 +69,6 @@ python fqshaL/FQSHA.py
  
 ```
 
-## 📂 Project Structure
-
-```
-fqsha/
-├── fqsha/                    # Core source code
-├── input_data/               # User inputs (fault data, config)
-├── FQSHA_output/             # Auto-generated outputs (OpenQuake, maps)
-├── tests/                    # Unit tests
-├── FQSHA.py                  # GUI Launcher
-├── README.md
-├── pyproject.toml
-```
 
 ---
 
