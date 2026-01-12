@@ -54,10 +54,9 @@ You can install FQSHA and all dependencies (including GDAL, GMT, and OpenQuake) 
    ```
 
 This will install:
-- Core FQSHA package (in editable mode)
+- Core FQSHA package 
 - OpenQuake Engine, PyGMT, GDAL, Fiona
-- Compatible NumPy version
-- All development and testing tools
+- Software testing tools
 
 
 ##  Run FQSHA in Linux
