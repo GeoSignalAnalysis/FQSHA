@@ -68,8 +68,6 @@ This will install:
 python fqshaL/FQSHA.py
  
 ```
-
-
 ---
 
 ## 📜 License
