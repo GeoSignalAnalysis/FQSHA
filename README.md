@@ -59,8 +59,6 @@ This will install:
 - Compatible NumPy version
 - All development and testing tools
 
----
----
 
 ##  Run FQSHA in Linux
 
