@@ -46,7 +46,7 @@ This will install:
 ---
 ---
 
-## 6. To Run FQSHA in Ubuntu
+##  Run FQSHA in Linux
 
 ```bash
 python fqshaL/FQSHA.py
