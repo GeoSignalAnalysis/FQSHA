@@ -17,7 +17,7 @@ FQSHA has been developed and tested both on Debian-based Linux OS systems and Wi
 
 We greatly value community contributions and are steadfastly committed to continuously addressing and resolving any bugs that arise in the repository. Should you encounter any issues, please don't hesitate to contact us.
 
-## 🛠 Installation Instructions Linux (Ubuntu)
+## 🛠 Installation Instructions Linux 
 
 You can install FQSHA and all dependencies (including GDAL, GMT, and OpenQuake) in one step using Conda.
 
